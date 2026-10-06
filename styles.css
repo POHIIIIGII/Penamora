@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #2B2B2B;
+}
+
+header {
+    background-color: #111;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+header > p {
+    font-size: 18px;
+}
+
+#navbar {
+    margin-top: 25px;
+}
+
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#navbar a {
+    color: #F8F5EE;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#navbar a:hover {
+    color: #D9A441;
+}
+
+#intro {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20%;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("IMAGES/EL nido.avif");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.intro-content {
+    max-width: 850px;
+    color: #F8F5EE;
+}
+
+.intro-content h2 {
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.intro-content p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.destination {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.destination::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+.destination-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    color: #F8F5EE;
+}
+
+.destination-content h2 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.destination-content p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.el-nido {
+    background-image: url("IMAGES/EL nido.avif");
+}
+
+.coron {
+    background-image: url("IMAGES/coron.avif");
+}
+
+.banaue {
+    background-image: url("IMAGES/rice.avif");
+}
+
+.vigan {
+    background-image: url("IMAGES/VIgan.webp");
+}
+
+.siquijor {
+    background-image: url("IMAGES/siquihor.avif");
+}
+
+.learn-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #F8F5EE;
+    color: #222;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.learn-button:hover {
+    background-color: #D9A441;
+    color: #111;
+    transform: translateY(-3px);
+}
+
+.information {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.info-section {
+    padding: 70px 0;
+    border-bottom: 1px solid #444;
+}
+
+.info-section h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.info-section h3 {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.info-section img {
+    display: block;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.info-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    padding-left: 25px;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.places-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+}
+
+.places-header h1 {
+    margin: 0;
+    color: #F8F5EE;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.places-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.places-nav a {
+    color: #F8F5EE;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.places-nav a:hover {
+    color: #D9A441;
+    transform: translateY(-2px);
+}
+
+.info-hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.info-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.20),
+            rgba(0, 0, 0, 0.75)
+        );
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: #F8F5EE;
+    padding: 20px;
+    animation: fadeUp 1s ease;
+}
+
+.hero-text h2 {
+    font-size: clamp(55px, 9vw, 110px);
+    margin: 0 0 15px;
+    letter-spacing: 4px;
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-text p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #D9A441;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.el-nido-info {
+    background-image: url("IMAGES/EL nido.avif");
+}
+
+.coron-info {
+    background-image: url("IMAGES/coron.avif");
+}
+
+.banaue-info {
+    background-image: url("IMAGES/rice.avif");
+}
+
+.vigan-info {
+    background-image: url("IMAGES/VIgan.webp");
+}
+
+.siquijor-info {
+    background-image: url("IMAGES/siquihor.avif");
+}
+
+.info-content {
+    padding: 100px 20px;
+    background: linear-gradient(
+        135deg,
+        #F4F1EA,
+        #E8E2D6
+    );
+}
+
+.info-card {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 55px;
+    background: #F8F5EE;
+    border-radius: 22px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.info-card h3 {
+    font-size: 34px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.info-card p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #2B2B2B;
+    margin-bottom: 20px;
+}
+
+.info-card .place-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 30px 0;
+}
+
+.info-divider {
+    width: 70px;
+    height: 4px;
+    background: #D9A441;
+    margin: 25px 0 30px;
+    border-radius: 10px;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.activity {
+    padding: 20px;
+    background: #EDE7DB;
+    color: #2B2B2B;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.activity:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.10);
+    background: #E2D8C7;
+}
+
+.button-container {
+    margin-top: 25px;
+}
+
+.web-link {
+    display: inline-block;
+    padding: 13px 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: #2B2B2B;
+    color: #F8F5EE;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.web-link:hover {
+    background: #D9A441;
+    color: #222;
+    transform: translateY(-3px);
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-title {
+    margin-top: 55px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.video-box {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.back-top {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    color: #6B6255;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-top:hover {
+    color: #D9A441;
+    transform: translateY(-2px);
+}
+
+footer {
+    padding: 40px 20px;
+    background: #111;
+    color: #F8F5EE;
+    text-align: center;
+}
+
+footer p {
+    margin: 7px;
+}
+
+footer a {
+    color: #F8F5EE;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #D9A441;
+}
+
+@media (max-width: 768px) {
+
+    .places-header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .places-nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .info-hero {
+        background-attachment: scroll;
+    }
+
+    .destination {
+        background-attachment: scroll;
+    }
+
+    .info-content {
+        padding: 60px 15px;
+    }
+
+    .info-card {
+        width: 100%;
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .info-card .place-image {
+        width: 100%;
+        max-width: 100%;
+        height: 280px;
+        margin: 25px 0;
+        border-radius: 14px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text h2 {
+        font-size: 55px;
+    }
+
+    .hero-text p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .places-header h1 {
+        font-size: 20px;
+    }
+
+    .places-nav {
+        gap: 8px;
+    }
+
+    .places-nav a {
+        font-size: 12px;
+    }
+
+    .info-card {
+        padding: 25px 18px;
+    }
+
+    .info-card h3 {
+        font-size: 27px;
+    }
+
+    .info-card p {
+        font-size: 16px;
+    }
+
+    .info-card .place-image {
+        height: 220px;
+    }
+
+    .hero-text h2 {
+        font-size: 45px;
+    }
+}
